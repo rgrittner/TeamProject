@@ -5,10 +5,9 @@ import javax.ws.rs.core.Application;
 import java.util.HashSet;
 import java.util.Set;
 
-//Defines the base URI for all resource URIs.
-@ApplicationPath("/services") //You may want to add a value here so that all traffic isn't routed to the class below.
+@ApplicationPath("/services")
 
-//The java class declares root resource and provider classes
+
 public class RestDriver extends Application {
 
     //The method returns a non-empty collection with classes, that must be included in the published JAX-RS application
@@ -18,4 +17,6 @@ public class RestDriver extends Application {
         h.add(JSONConverter.class );
         return h;
     }
+}
+}
 }
