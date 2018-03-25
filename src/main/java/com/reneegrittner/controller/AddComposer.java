@@ -73,19 +73,12 @@ public class AddComposer extends HttpServlet {
 
 
 
-
-
-                // Check for someone that already exists?
-        // If not found then add?
-
-        // Search by object? search by two parameters?
-
         GenericDao genericDao = new GenericDao(Composer.class);
 
         genericDao.insert(composerToBeAdded);
 
 
-        String url = "/composers";
+        String url = "/concertPlanner/composers";
 
         resp.sendRedirect(url);
 
