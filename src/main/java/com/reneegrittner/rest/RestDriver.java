@@ -13,7 +13,7 @@ public class RestDriver extends Application {
     @Override
     public Set<Class<?>> getClasses() {
         HashSet h = new HashSet<Class<?>>();
-        h.add(JSONConverter.class );
+        h.add(JSONComposer.class );
         return h;
     }
 }
