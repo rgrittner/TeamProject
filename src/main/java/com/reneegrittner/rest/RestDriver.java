@@ -1,11 +1,12 @@
 package com.reneegrittner.rest;
+
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 import java.util.HashSet;
 import java.util.Set;
 
-//Defines the base URI for all resource URIs.
 @ApplicationPath("/services")
+
 
 public class RestDriver extends Application {
 
@@ -14,10 +15,10 @@ public class RestDriver extends Application {
     public Set<Class<?>> getClasses() {
         HashSet h = new HashSet<Class<?>>();
         h.add(JSONComposer.class );
+        h.add(JSONNationality.class);
+
         return h;
     }
+
 }
-
-
-
 
