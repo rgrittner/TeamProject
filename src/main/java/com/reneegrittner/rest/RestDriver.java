@@ -5,11 +5,10 @@ import javax.ws.rs.core.Application;
 import java.util.HashSet;
 import java.util.Set;
 
-//Defines the base URI for all resource URIs.
 
-@ApplicationPath("/services") //You may want to add a value here so that all traffic isn't routed to the class below.
+@ApplicationPath("/services")
 
-//The java class declares root resource and provider classes
+
 
 public class RestDriver extends Application {
 
@@ -17,7 +16,11 @@ public class RestDriver extends Application {
     @Override
     public Set<Class<?>> getClasses() {
         HashSet h = new HashSet<Class<?>>();
-        h.add(JSONConverter.class );
+        h.add(JSONComposer.class );
+        h.add(JSONNationality.class);
         return h;
     }
+
 }
+
+

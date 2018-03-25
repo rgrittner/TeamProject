@@ -10,7 +10,9 @@ import javax.ws.rs.core.Response;
 import java.util.List;
 
 
-@Path("/jsonConverter")
+
+@Path("/jsonComposer")
+
 public class JSONComposer {
     
 
