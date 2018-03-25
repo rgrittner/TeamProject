@@ -85,7 +85,7 @@ public class AddComposer extends HttpServlet {
         genericDao.insert(composerToBeAdded);
 
 
-        String url = "/composers";
+        String url = "/concertPlanner/composers";
 
         resp.sendRedirect(url);
 
