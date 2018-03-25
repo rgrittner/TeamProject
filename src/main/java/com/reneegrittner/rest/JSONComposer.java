@@ -1,4 +1,5 @@
 package com.reneegrittner.rest;
+
 import com.reneegrittner.entity.Composer;
 import com.reneegrittner.persistence.GenericDao;
 
@@ -9,8 +10,10 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
-@Path("/jsonConverter")
-public class JSONConverter {
+
+
+@Path("/jsonComposer")
+public class JSONComposer {
     
 
     @GET
