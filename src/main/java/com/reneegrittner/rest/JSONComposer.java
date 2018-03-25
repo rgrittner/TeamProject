@@ -11,7 +11,7 @@ import java.util.List;
 
 
 @Path("/jsonConverter")
-public class JSONConverter {
+public class JSONComposer {
     
 
     @GET
