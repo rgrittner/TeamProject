@@ -134,7 +134,7 @@ public class GenericDao<T> {
      *
      * @param entityToUpdate the entity to update
      */
-    
+
     public void saveOrUpdate(T entityToUpdate) {
         Session session = getSession();
         Transaction transaction = session.beginTransaction();

@@ -16,8 +16,8 @@ public class RestDriver extends Application {
     @Override
     public Set<Class<?>> getClasses() {
         HashSet h = new HashSet<Class<?>>();
-        h.add(JSONComposer.class );
-        h.add(JSONNationality.class);
+        h.add(JSONComposers.class );
+        h.add(JSONNationalitys.class);
 
         return h;
     }
