@@ -31,8 +31,6 @@ public class GenericDao<T> {
         Session session = getSession();
         Transaction transaction = session.beginTransaction();
         id = (int)session.save(entity);
-        logger.debug("id from DAO: " + id);
-        System.out.println("id from DAO " + id);
         transaction.commit();
         session.close();
         return id;
@@ -44,7 +42,6 @@ public class GenericDao<T> {
      * @return the all
      */
     public List<T> getAll() {
-        System.out.println("HELLO");
         Session session = getSession();
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<T> query = builder.createQuery(type);
@@ -69,7 +66,7 @@ public class GenericDao<T> {
      * @param value        the value
      * @return the list
      */
-    public List<T> getByPropertyEqual(String propertyName, String value){
+    public List<T> getByPropertyEqual(String propertyName, Object value){
         Session session = getSession();
 
         CriteriaBuilder builder = session.getCriteriaBuilder();
@@ -80,23 +77,7 @@ public class GenericDao<T> {
         return list;
     }
 
-    /**
-     * Get by property equal list when an Integer is the value.
-     *
-     * @param propertyName the property name
-     * @param value        the value
-     * @return the list
-     */
-    public List<T> getByPropertyEqual(String propertyName, Integer value){
-        Session session = getSession();
 
-        CriteriaBuilder builder = session.getCriteriaBuilder();
-        CriteriaQuery<T> query = builder.createQuery(type);
-        Root<T> root = query.from(type);
-        query.select(root).where(builder.equal(root.get(propertyName), value));
-        List<T> list = session.createQuery(query).getResultList();
-        return list;
-    }
 
     /**
      * Get by property equal list when an Integer is the value.
@@ -153,7 +134,7 @@ public class GenericDao<T> {
      *
      * @param entityToUpdate the entity to update
      */
-    @SuppressWarnings("Duplicates")
+
     public void saveOrUpdate(T entityToUpdate) {
         Session session = getSession();
         Transaction transaction = session.beginTransaction();
@@ -168,7 +149,7 @@ public class GenericDao<T> {
      *
      * @param entity the entity to delete
      */
-    @SuppressWarnings("Duplicates")
+
     public void delete(T entity) {
         Session session = getSession();
         Transaction transaction = session.beginTransaction();

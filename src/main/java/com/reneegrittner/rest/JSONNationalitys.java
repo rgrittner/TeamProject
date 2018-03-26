@@ -12,7 +12,7 @@ import java.util.List;
 
 
 @Path("/jsonNationality")
-public class JSONNationality {
+public class JSONNationalitys {
     
 
     @GET
