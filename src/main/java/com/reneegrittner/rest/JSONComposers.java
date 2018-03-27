@@ -10,10 +10,9 @@ import javax.ws.rs.core.Response;
 import java.util.List;
 
 
-
 @Path("/jsonComposer")
 
-public class JSONComposer {
+public class JSONComposers {
     
 
     @GET
