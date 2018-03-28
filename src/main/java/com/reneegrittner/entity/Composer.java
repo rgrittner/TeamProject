@@ -1,5 +1,7 @@
 package com.reneegrittner.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -31,12 +33,13 @@ public class Composer {
     @Column(name = "death_year")
     private Integer deathYear;
 
+    @JsonManagedReference
     @ManyToOne
     private Nationality nationality;
 
-
-    @OneToMany(mappedBy = "composer", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
-    private Set<Composition> compositions = new HashSet<>();
+   // @JsonIgnoreProperties("composer")
+    //@OneToMany(mappedBy = "composer", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    //private Set<Composition> compositions = new HashSet<>();
 
 
     /**
@@ -176,23 +179,19 @@ public class Composer {
     }
 
 
-    public Set<Composition> getCompositions() {
-        return compositions;
-    }
+   // public Set<Composition> getCompositions() { return compositions; }
 
-    public void setCompositions(Set<Composition> compositions) {
-        this.compositions = compositions;
-    }
+  //  public void setCompositions(Set<Composition> compositions) {this.compositions = compositions;}
 
-    public void addComposition(Composition composition) {
-        compositions.add(composition);
-        composition.setComposer(this);
-    }
+//    public void addComposition(Composition composition) {
+//        compositions.add(composition);
+//        composition.setComposer(this);
+//    }
 
-    public void removeComposition(Composition composition) {
-        compositions.add(composition);
-        composition.setComposer(null);
-    }
+//    public void removeComposition(Composition composition) {
+//        compositions.add(composition);
+//        composition.setComposer(null);
+//    }
 
     @Override
     public String toString() {

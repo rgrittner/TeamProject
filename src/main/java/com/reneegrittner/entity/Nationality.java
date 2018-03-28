@@ -1,6 +1,8 @@
 package com.reneegrittner.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -26,6 +28,8 @@ public class Nationality {
     @Column(name = "nationality")
     private String nationality;
 
+    @JsonIgnoreProperties("composer")
+    @JsonBackReference
     @OneToMany(mappedBy = "nationality", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<Composer> composers = new HashSet<>();
 
