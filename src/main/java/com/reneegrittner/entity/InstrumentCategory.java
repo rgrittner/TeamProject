@@ -13,8 +13,8 @@ import java.util.Set;
  * categories will allow for better display and sorting.
  * @author Renee Grittner
  */
-@Entity(name = "InstrumentCategory")
-@Table(name = "Instrument_Category")
+//@Entity(name = "InstrumentCategory")
+//@Table(name = "Instrument_Category")
 public class InstrumentCategory {
 
 //    @Id
