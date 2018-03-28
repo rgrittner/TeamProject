@@ -9,8 +9,8 @@ import java.util.Objects;
  * A class to represent a musician.
  * @author Renee Grittner
  */
-@Entity(name = "Musician")
-@Table(name = "Musician")
+//@Entity(name = "Musician")
+//@Table(name = "Musician")
 public class Musician {
 
 //    @Id

@@ -11,8 +11,8 @@ import java.util.Objects;
  *
  * @author Renee Grittner
  */
-@Entity(name = "Instrument")
-@Table(name = "Instrument")
+//@Entity(name = "Instrument")
+//@Table(name = "Instrument")
 public class Instrument {
 
 //    @Id
