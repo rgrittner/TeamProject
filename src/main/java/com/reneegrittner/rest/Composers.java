@@ -24,32 +24,48 @@ import java.util.List;
 
 public class Composers {
     private final Logger logger = LogManager.getLogger(this.getClass());
+    GenericDao<Composer> dao = new GenericDao<>(Composer.class);
     @GET
     public Response retrieveAllComposers() throws IOException {
-        GenericDao<Composer> dao = new GenericDao<>(Composer.class);
+
         List<Composer> composerResultSet = dao.getAll();
-        logger.debug("List of composers?? " + composerResultSet);
-//        String jsonCarArray =
-//                "[{ \"nationality\" : \"American\" }, { \"nationality\" : \"French\" }]";
+
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
 
-
-        //composerResultSet = objectMapper.readValue(jsonCarArray, new TypeReference<List<Nationality>>(){});
         String jsonToReturn = objectMapper.writeValueAsString(composerResultSet);
-        logger.debug("json string? " + jsonToReturn);
         return Response.status(200).entity(jsonToReturn).build();
     }
 
     @GET
     @Path("/{param}")
 
-    public Response composersOfProvidedNationality(@PathParam("param") String nationality){
+    public Response composersOfProvidedNationality(@PathParam("param") String nationality) throws JsonProcessingException {
+        GenericDao localDao = new GenericDao(Nationality.class);
+        int nationalityId = 0;
+        // Search by property, this returns a list
+        List<Nationality> nationalityObject = localDao.getByPropertyEqual("nationality", nationality);
+        logger.debug(nationalityObject);
+        //Error handling? Continue if there is only one result in the list
+        if(nationalityObject.size() == 1){
+            for (Nationality current :nationalityObject
+                 ) {
+                nationalityId = current.getId();
+                logger.debug("Nationality id from for loop " + nationalityId );
 
+            }
+            List<Composer> composerOfSpecificNationalityResultsSet = dao.getByPropertyEqual("nationality", nationalityId);
 
-        String output = "Hey! Check this shit out! We got something from the path and it is: " + nationality;
+            ObjectMapper objectMapper = new ObjectMapper();
+            objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
 
-        return Response.status(200).entity(output).build();
+            String output = objectMapper.writeValueAsString(composerOfSpecificNationalityResultsSet);
+
+            return Response.status(200).entity(output).build();
+        } else {
+            return Response.status(200).entity("Error").build();
+        }
+
     }
 
     @GET

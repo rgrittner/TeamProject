@@ -54,6 +54,15 @@ public class NationalityDaoTest {
     }
 
     /**
+     * Verify successful get by property (like match)
+     */
+    @Test
+    void getByPropertyLikeSuccess() {
+        List<Nationality> nationalityList = genericDao.getByPropertyLike("nationality", "American");
+        assertEquals(1, nationalityList.size());
+    }
+
+    /**
      *  Verify successful insert of nationality.
      */
     @Test
