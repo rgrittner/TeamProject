@@ -1,5 +1,7 @@
 package com.reneegrittner.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -25,6 +27,8 @@ public class InstrumentCategory {
     @Column(name = "category")
     private String category;
 
+    @JsonIgnoreProperties("instrument")
+    @JsonBackReference
     @OneToMany(mappedBy = "instrumentCategory", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
 
     private Set<Instrument> instruments = new HashSet<>();
