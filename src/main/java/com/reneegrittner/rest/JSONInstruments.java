@@ -20,7 +20,6 @@ public class JSONInstruments {
         GenericDao<Instrument> dao = new GenericDao<>(Instrument.class);
         List<Instrument> Instruments = dao.getAll();
 
-
         return Response.status(200).entity(Instruments.toString()).build();
     }
 }
