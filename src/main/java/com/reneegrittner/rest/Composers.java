@@ -43,17 +43,18 @@ public class Composers {
     public Response composersOfProvidedNationality(@PathParam("param") String nationality) throws JsonProcessingException {
         GenericDao localDao = new GenericDao(Nationality.class);
         int nationalityId = 0;
-        // Search by property, this returns a list
-        List<Nationality> nationalityObject = localDao.getByPropertyEqual("nationality", nationality);
-        logger.debug(nationalityObject);
-        //Error handling? Continue if there is only one result in the list
-        if(nationalityObject.size() == 1){
-            for (Nationality current :nationalityObject
-                 ) {
-                nationalityId = current.getId();
-                logger.debug("Nationality id from for loop " + nationalityId );
 
-            }
+        // Search by property, this returns a list
+        List<Nationality> nationalityList = localDao.getByPropertyEqual("nationality", nationality);
+        logger.debug(nationalityList);
+
+        //Error handling? Continue if there is only one result in the list
+        if(nationalityList.size() == 1){
+
+            // Get the id for the one returned nationality. Only expecting one, so should be at position 0.
+            nationalityId = nationalityList.get(0).getId();
+
+            // Now query for list of composers using the ID
             List<Composer> composerOfSpecificNationalityResultsSet = dao.getByPropertyEqual("nationality", nationalityId);
 
             ObjectMapper objectMapper = new ObjectMapper();
@@ -63,7 +64,10 @@ public class Composers {
 
             return Response.status(200).entity(output).build();
         } else {
-            return Response.status(200).entity("Error").build();
+            // If no composers are returned send a nice message. Couldn't find a good error code for this,
+            // not sure if an error code is even the right response. Or, should it just send back an empty json object?
+            String errorMessage = "There are currently no composers with a nationality of " + nationality;
+            return Response.status(200).entity(errorMessage).build();
         }
 
     }
