@@ -8,7 +8,7 @@
 
 
 ### Xinan
-- [ ] implement instrument REST class
+- [X] implement instrument REST class
 
 ### Team
 - [X] set up team repository

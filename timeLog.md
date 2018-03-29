@@ -2,18 +2,8 @@
 
 | Date | Task | Hours | Notes |
 | -----  |  ---- |    : -----:|   ----- |
-|1/25/18 | Discussed ERD w/ Tom Steele followed by a redesign of concept structure | 1 | |
-|1/25/18 | Chatted with Sean about adding ability to list movements instead of just compositions. This seems like a good idea, will continue with redesign | .5 | |
-|1/25/18 | Began adding sample data to a spread sheet, additional tables may be needed (Nationality, possible further break down of Instruments) | 1 | |
-|2/1/18  | DB design furthered, additional discussion with Sean about flow of website and added more sample data to spread sheet | 2 | |
-|2/6/18  | Wireframes mostly completed, need to show to Sean to go over flow. | 2 | |
-|2/8/18  | Discussed updated ERD with Tom Steele again, looks good | 15 min | |
-|2/9/18  | Implemented DB designed using Vertabelo, also created test DB| 10 min| |
-|2/10/18 | Created Musician and Nationality POJO's, DAO's and DAO Tests| 2 | |
-|2/12/18 | Created generic bare bones jsp for index and search Musician. Search all musicians is accurately getting and displaying data. | 2 | |
-|2/15/18 | Converted over to generic DAO, insured all unit tests and jsp's were corrected to reflect changes in DAO. | 1 | |
-|2/20/18 | Began implementing many to one relationship between Nationality and Composer. getAll, getById, and insert composer all functioning | 3 | Some struggles with cleaning sql|  
-|2/23/18 | Completed: InstrumentCategory & Instrument classes with relationships. Full testing passing. Display Composer w/ Nationality in jsp (44 commits!) | 5 | |
-|2/24/18 | Getting started with AWS, instance up, MySQL working and root password is changed. Updated ReadMe | 1 | |
-|2/25/18 | Getting Composition connected to Composer, able to display compositions and composer to website | 2 | |
-|2/26/18 | Getting UI set up, implemented better layout to pages. Added insert to Musician but no data verification | 3 | |
+| 3/18/2018 | Watched Week 8 and 9 videos, completed Week 9 activities, came up with project idea | 6 | XW, NS, RG |
+| 3/25/2018 | Completed Week 9 Exercise, Problem Statement, Project Plan, and Project Structure  | 6 | XW, NS, RG |
+| 3/27/2018 | Tried to figure out how to generate JSON with Java objects | 2 | XW, NS, RG |
+| 3/28/2018 | Cleaned up unnecessary codes and entities from project, successfully get all methods working for Composers Rest class | ? | NS, RG |
+| 3/29/2018 | Completed Instruments Rest class, edited project plan, time log, and problem statement | 2 | XW |
