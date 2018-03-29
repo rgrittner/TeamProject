@@ -27,7 +27,3 @@ public class JSONComposers {
 
 }
 
-
-
-/teamProject/Composers/json   /// returns json
-/teamProject/Composers/xml // returns xml
