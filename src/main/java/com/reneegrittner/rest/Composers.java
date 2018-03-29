@@ -28,16 +28,11 @@ public class Composers {
     public Response retrieveAllComposers() throws IOException {
         GenericDao<Composer> dao = new GenericDao<>(Composer.class);
         List<Composer> composerResultSet = dao.getAll();
-        logger.debug("List of composers?? " + composerResultSet);
-//        String jsonCarArray =
-//                "[{ \"nationality\" : \"American\" }, { \"nationality\" : \"French\" }]";
+
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
 
-
-        //composerResultSet = objectMapper.readValue(jsonCarArray, new TypeReference<List<Nationality>>(){});
         String jsonToReturn = objectMapper.writeValueAsString(composerResultSet);
-        logger.debug("json string? " + jsonToReturn);
         return Response.status(200).entity(jsonToReturn).build();
     }
 
