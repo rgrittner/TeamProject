@@ -18,6 +18,7 @@ public class RestDriver extends Application {
         HashSet h = new HashSet<Class<?>>();
         h.add(Composers.class );
         h.add(Nationalities.class);
+        h.add(Musicians.class);
 
         return h;
     }
