@@ -20,7 +20,8 @@
                         Aliquam porttit or mauris sit amet orci. Aenean dignissim pellentesque felis.</h4></li>
             </ul>
             <ul class="grid effect-8" id="grid">
-                <li><a href="/concertPlanner/services/jsonConverter">JSON Converter</a></li>
+                <li><a href="/concertPlanner/services/jsonComposer">JSON Composer</a></li>
+                <li><a href="/concertPlanner/services/jsonNationality">JSON Nationality</a></li>
                 <li><a href="/concertPlanner/musicians">Get All Musicians</a></li>
                 <li><a href="/concertPlanner/addMusician">Add a Musician</a></li>
                 <li><a href="/concertPlanner/composers">Get All Composers</a></li>

@@ -1,144 +1,15 @@
-<<<<<<< HEAD
-[INFO ] 2018-03-06 15:23:09.511 [http-nio-8080-exec-1] Version - HHH000412: Hibernate Core {5.2.12.Final}
-[INFO ] 2018-03-06 15:23:09.515 [http-nio-8080-exec-1] Environment - HHH000206: hibernate.properties not found
-[INFO ] 2018-03-06 15:23:10.028 [http-nio-8080-exec-1] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-[INFO ] 2018-03-06 15:23:10.268 [http-nio-8080-exec-1] C3P0ConnectionProvider - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://localhost:3306/concertPlanner
-[INFO ] 2018-03-06 15:23:10.268 [http-nio-8080-exec-1] C3P0ConnectionProvider - HHH10001001: Connection properties: {user=root, password=****}
-[INFO ] 2018-03-06 15:23:10.268 [http-nio-8080-exec-1] C3P0ConnectionProvider - HHH10001003: Autocommit mode: false
-[INFO ] 2018-03-06 15:23:10.531 [http-nio-8080-exec-1] C3P0ConnectionProvider - HHH10001007: JDBC isolation level: <unknown>
-[INFO ] 2018-03-06 15:23:11.025 [http-nio-8080-exec-1] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-[INFO ] 2018-03-06 15:23:13.029 [http-nio-8080-exec-1] QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
-[INFO ] 2018-03-25 14:08:47.793 [main] Version - HHH000412: Hibernate Core {5.2.12.Final}
-[INFO ] 2018-03-25 14:08:47.795 [main] Environment - HHH000206: hibernate.properties not found
-[INFO ] 2018-03-25 14:08:48.254 [main] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-[INFO ] 2018-03-25 14:08:48.430 [main] C3P0ConnectionProvider - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://localhost:3306/test_concertPlanner
-[INFO ] 2018-03-25 14:08:48.430 [main] C3P0ConnectionProvider - HHH10001001: Connection properties: {user=root, password=****}
-[INFO ] 2018-03-25 14:08:48.430 [main] C3P0ConnectionProvider - HHH10001003: Autocommit mode: false
-[INFO ] 2018-03-25 14:08:48.749 [main] C3P0ConnectionProvider - HHH10001007: JDBC isolation level: <unknown>
-[INFO ] 2018-03-25 14:08:48.949 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-[WARN ] 2018-03-25 14:08:50.175 [main] SqlExceptionHelper - SQL Error: 1451, SQLState: 23000
-[ERROR] 2018-03-25 14:08:50.176 [main] SqlExceptionHelper - Cannot delete or update a parent row: a foreign key constraint fails (`test_concertplanner`.`composition`, CONSTRAINT `Composition_Composer` FOREIGN KEY (`Composer_id`) REFERENCES `composer` (`id`))
-[INFO ] 2018-03-25 14:08:50.176 [main] AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
-[ERROR] 2018-03-25 14:08:50.178 [main] ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
-[INFO ] 2018-03-25 14:08:51.500 [main] QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
-[WARN ] 2018-03-25 14:08:58.215 [main] SqlExceptionHelper - SQL Error: 1451, SQLState: 23000
-[ERROR] 2018-03-25 14:08:58.215 [main] SqlExceptionHelper - Cannot delete or update a parent row: a foreign key constraint fails (`test_concertplanner`.`instrument`, CONSTRAINT `Instrument_Instrument_Category` FOREIGN KEY (`Instrument_Category_id`) REFERENCES `instrument_category` (`id`))
-[INFO ] 2018-03-25 14:08:58.215 [main] AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
-[ERROR] 2018-03-25 14:08:58.215 [main] ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
-[WARN ] 2018-03-25 14:09:09.438 [main] SqlExceptionHelper - SQL Error: 1451, SQLState: 23000
-[ERROR] 2018-03-25 14:09:09.438 [main] SqlExceptionHelper - Cannot delete or update a parent row: a foreign key constraint fails (`test_concertplanner`.`composition`, CONSTRAINT `Composition_Composer` FOREIGN KEY (`Composer_id`) REFERENCES `composer` (`id`))
-[INFO ] 2018-03-25 14:09:09.438 [main] AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
-[ERROR] 2018-03-25 14:09:09.439 [main] ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
-[INFO ] 2018-03-25 14:11:20.971 [http-nio-8080-exec-7] Version - HHH000412: Hibernate Core {5.2.12.Final}
-[INFO ] 2018-03-25 14:11:20.974 [http-nio-8080-exec-7] Environment - HHH000206: hibernate.properties not found
-[INFO ] 2018-03-25 14:11:21.845 [http-nio-8080-exec-7] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-[INFO ] 2018-03-25 14:11:22.247 [http-nio-8080-exec-7] C3P0ConnectionProvider - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://localhost:3306/concertPlanner
-[INFO ] 2018-03-25 14:11:22.247 [http-nio-8080-exec-7] C3P0ConnectionProvider - HHH10001001: Connection properties: {user=root, password=****}
-[INFO ] 2018-03-25 14:11:22.247 [http-nio-8080-exec-7] C3P0ConnectionProvider - HHH10001003: Autocommit mode: false
-[INFO ] 2018-03-25 14:11:22.561 [http-nio-8080-exec-7] C3P0ConnectionProvider - HHH10001007: JDBC isolation level: <unknown>
-[INFO ] 2018-03-25 14:11:23.303 [http-nio-8080-exec-7] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-[INFO ] 2018-03-25 14:11:26.270 [http-nio-8080-exec-7] QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
-[INFO ] 2018-03-25 14:12:55.109 [main] Version - HHH000412: Hibernate Core {5.2.12.Final}
-[INFO ] 2018-03-25 14:12:55.111 [main] Environment - HHH000206: hibernate.properties not found
-[INFO ] 2018-03-25 14:12:55.474 [main] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-[INFO ] 2018-03-25 14:12:55.617 [main] C3P0ConnectionProvider - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://localhost:3306/test_concertPlanner
-[INFO ] 2018-03-25 14:12:55.617 [main] C3P0ConnectionProvider - HHH10001001: Connection properties: {user=root, password=****}
-[INFO ] 2018-03-25 14:12:55.617 [main] C3P0ConnectionProvider - HHH10001003: Autocommit mode: false
-[INFO ] 2018-03-25 14:12:55.875 [main] C3P0ConnectionProvider - HHH10001007: JDBC isolation level: <unknown>
-[INFO ] 2018-03-25 14:12:55.964 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-[WARN ] 2018-03-25 14:12:57.190 [main] SqlExceptionHelper - SQL Error: 1451, SQLState: 23000
-[ERROR] 2018-03-25 14:12:57.191 [main] SqlExceptionHelper - Cannot delete or update a parent row: a foreign key constraint fails (`test_concertplanner`.`composition`, CONSTRAINT `Composition_Composer` FOREIGN KEY (`Composer_id`) REFERENCES `composer` (`id`))
-[INFO ] 2018-03-25 14:12:57.191 [main] AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
-[ERROR] 2018-03-25 14:12:57.191 [main] ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
-[INFO ] 2018-03-25 14:12:58.417 [main] QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
-[WARN ] 2018-03-25 14:13:06.435 [main] SqlExceptionHelper - SQL Error: 1451, SQLState: 23000
-[ERROR] 2018-03-25 14:13:06.435 [main] SqlExceptionHelper - Cannot delete or update a parent row: a foreign key constraint fails (`test_concertplanner`.`instrument`, CONSTRAINT `Instrument_Instrument_Category` FOREIGN KEY (`Instrument_Category_id`) REFERENCES `instrument_category` (`id`))
-[INFO ] 2018-03-25 14:13:06.435 [main] AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
-[ERROR] 2018-03-25 14:13:06.436 [main] ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
-[WARN ] 2018-03-25 14:13:19.285 [main] SqlExceptionHelper - SQL Error: 1451, SQLState: 23000
-[ERROR] 2018-03-25 14:13:19.285 [main] SqlExceptionHelper - Cannot delete or update a parent row: a foreign key constraint fails (`test_concertplanner`.`composition`, CONSTRAINT `Composition_Composer` FOREIGN KEY (`Composer_id`) REFERENCES `composer` (`id`))
-[INFO ] 2018-03-25 14:13:19.285 [main] AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
-[ERROR] 2018-03-25 14:13:19.285 [main] ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
-[INFO ] 2018-03-25 14:14:03.161 [http-nio-8080-exec-8] Version - HHH000412: Hibernate Core {5.2.12.Final}
-[INFO ] 2018-03-25 14:14:03.162 [http-nio-8080-exec-8] Environment - HHH000206: hibernate.properties not found
-[INFO ] 2018-03-25 14:14:03.962 [http-nio-8080-exec-8] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-[INFO ] 2018-03-25 14:14:04.373 [http-nio-8080-exec-8] C3P0ConnectionProvider - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://localhost:3306/concertPlanner
-[INFO ] 2018-03-25 14:14:04.374 [http-nio-8080-exec-8] C3P0ConnectionProvider - HHH10001001: Connection properties: {user=root, password=****}
-[INFO ] 2018-03-25 14:14:04.374 [http-nio-8080-exec-8] C3P0ConnectionProvider - HHH10001003: Autocommit mode: false
-[INFO ] 2018-03-25 14:14:04.763 [http-nio-8080-exec-8] C3P0ConnectionProvider - HHH10001007: JDBC isolation level: <unknown>
-[INFO ] 2018-03-25 14:14:05.524 [http-nio-8080-exec-8] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-[INFO ] 2018-03-25 14:14:08.579 [http-nio-8080-exec-8] QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
-[INFO ] 2018-03-25 14:18:48.268 [main] Version - HHH000412: Hibernate Core {5.2.12.Final}
-[INFO ] 2018-03-25 14:18:48.271 [main] Environment - HHH000206: hibernate.properties not found
-[INFO ] 2018-03-25 14:18:48.634 [main] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-[INFO ] 2018-03-25 14:18:48.776 [main] C3P0ConnectionProvider - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://localhost:3306/test_concertPlanner
-[INFO ] 2018-03-25 14:18:48.777 [main] C3P0ConnectionProvider - HHH10001001: Connection properties: {user=root, password=****}
-[INFO ] 2018-03-25 14:18:48.777 [main] C3P0ConnectionProvider - HHH10001003: Autocommit mode: false
-[INFO ] 2018-03-25 14:18:49.038 [main] C3P0ConnectionProvider - HHH10001007: JDBC isolation level: <unknown>
-[INFO ] 2018-03-25 14:18:49.128 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-[WARN ] 2018-03-25 14:18:50.378 [main] SqlExceptionHelper - SQL Error: 1451, SQLState: 23000
-[ERROR] 2018-03-25 14:18:50.378 [main] SqlExceptionHelper - Cannot delete or update a parent row: a foreign key constraint fails (`test_concertplanner`.`composition`, CONSTRAINT `Composition_Composer` FOREIGN KEY (`Composer_id`) REFERENCES `composer` (`id`))
-[INFO ] 2018-03-25 14:18:50.380 [main] AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
-[ERROR] 2018-03-25 14:18:50.381 [main] ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
-[INFO ] 2018-03-25 14:18:51.693 [main] QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
-[WARN ] 2018-03-25 14:18:59.957 [main] SqlExceptionHelper - SQL Error: 1451, SQLState: 23000
-[ERROR] 2018-03-25 14:18:59.957 [main] SqlExceptionHelper - Cannot delete or update a parent row: a foreign key constraint fails (`test_concertplanner`.`instrument`, CONSTRAINT `Instrument_Instrument_Category` FOREIGN KEY (`Instrument_Category_id`) REFERENCES `instrument_category` (`id`))
-[INFO ] 2018-03-25 14:18:59.957 [main] AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
-[ERROR] 2018-03-25 14:18:59.958 [main] ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
-[WARN ] 2018-03-25 14:19:13.502 [main] SqlExceptionHelper - SQL Error: 1451, SQLState: 23000
-[ERROR] 2018-03-25 14:19:13.502 [main] SqlExceptionHelper - Cannot delete or update a parent row: a foreign key constraint fails (`test_concertplanner`.`composition`, CONSTRAINT `Composition_Composer` FOREIGN KEY (`Composer_id`) REFERENCES `composer` (`id`))
-[INFO ] 2018-03-25 14:19:13.512 [main] AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
-[ERROR] 2018-03-25 14:19:13.512 [main] ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
-[INFO ] 2018-03-25 15:13:39.753 [main] Version - HHH000412: Hibernate Core {5.2.12.Final}
-[INFO ] 2018-03-25 15:13:39.756 [main] Environment - HHH000206: hibernate.properties not found
-[INFO ] 2018-03-25 15:13:40.049 [main] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-[INFO ] 2018-03-25 15:13:40.143 [main] C3P0ConnectionProvider - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://localhost:3306/test_concertPlanner
-[INFO ] 2018-03-25 15:13:40.143 [main] C3P0ConnectionProvider - HHH10001001: Connection properties: {user=root, password=****}
-[INFO ] 2018-03-25 15:13:40.143 [main] C3P0ConnectionProvider - HHH10001003: Autocommit mode: false
-[INFO ] 2018-03-25 15:13:40.348 [main] C3P0ConnectionProvider - HHH10001007: JDBC isolation level: <unknown>
-[INFO ] 2018-03-25 15:13:40.427 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-[WARN ] 2018-03-25 15:13:41.136 [main] SqlExceptionHelper - SQL Error: 1451, SQLState: 23000
-[ERROR] 2018-03-25 15:13:41.136 [main] SqlExceptionHelper - Cannot delete or update a parent row: a foreign key constraint fails (`test_concertplanner`.`composition`, CONSTRAINT `Composition_Composer` FOREIGN KEY (`Composer_id`) REFERENCES `composer` (`id`))
-[INFO ] 2018-03-25 15:13:41.136 [main] AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
-[ERROR] 2018-03-25 15:13:41.136 [main] ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
-[INFO ] 2018-03-25 15:13:41.862 [main] QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
-[WARN ] 2018-03-25 15:13:46.034 [main] SqlExceptionHelper - SQL Error: 1451, SQLState: 23000
-[ERROR] 2018-03-25 15:13:46.034 [main] SqlExceptionHelper - Cannot delete or update a parent row: a foreign key constraint fails (`test_concertplanner`.`instrument`, CONSTRAINT `Instrument_Instrument_Category` FOREIGN KEY (`Instrument_Category_id`) REFERENCES `instrument_category` (`id`))
-[INFO ] 2018-03-25 15:13:46.034 [main] AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
-[ERROR] 2018-03-25 15:13:46.034 [main] ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
-[WARN ] 2018-03-25 15:13:52.302 [main] SqlExceptionHelper - SQL Error: 1451, SQLState: 23000
-[ERROR] 2018-03-25 15:13:52.302 [main] SqlExceptionHelper - Cannot delete or update a parent row: a foreign key constraint fails (`test_concertplanner`.`composition`, CONSTRAINT `Composition_Composer` FOREIGN KEY (`Composer_id`) REFERENCES `composer` (`id`))
-[INFO ] 2018-03-25 15:13:52.303 [main] AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
-[ERROR] 2018-03-25 15:13:52.303 [main] ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
-[INFO ] 2018-03-25 15:50:18.596 [main] Version - HHH000412: Hibernate Core {5.2.12.Final}
-[INFO ] 2018-03-25 15:50:18.596 [main] Environment - HHH000206: hibernate.properties not found
-[INFO ] 2018-03-25 15:50:18.893 [main] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-[INFO ] 2018-03-25 15:50:19.002 [main] C3P0ConnectionProvider - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://localhost:3306/test_concertPlanner
-[INFO ] 2018-03-25 15:50:19.002 [main] C3P0ConnectionProvider - HHH10001001: Connection properties: {user=root, password=****}
-[INFO ] 2018-03-25 15:50:19.002 [main] C3P0ConnectionProvider - HHH10001003: Autocommit mode: false
-[INFO ] 2018-03-25 15:50:19.205 [main] C3P0ConnectionProvider - HHH10001007: JDBC isolation level: <unknown>
-[INFO ] 2018-03-25 15:50:19.283 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-[WARN ] 2018-03-25 15:50:20.002 [main] SqlExceptionHelper - SQL Error: 1451, SQLState: 23000
-[ERROR] 2018-03-25 15:50:20.002 [main] SqlExceptionHelper - Cannot delete or update a parent row: a foreign key constraint fails (`test_concertplanner`.`composition`, CONSTRAINT `Composition_Composer` FOREIGN KEY (`Composer_id`) REFERENCES `composer` (`id`))
-[INFO ] 2018-03-25 15:50:20.002 [main] AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
-[ERROR] 2018-03-25 15:50:20.002 [main] ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
-[INFO ] 2018-03-25 15:50:20.736 [main] QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
-[WARN ] 2018-03-25 15:50:24.830 [main] SqlExceptionHelper - SQL Error: 1451, SQLState: 23000
-[ERROR] 2018-03-25 15:50:24.830 [main] SqlExceptionHelper - Cannot delete or update a parent row: a foreign key constraint fails (`test_concertplanner`.`instrument`, CONSTRAINT `Instrument_Instrument_Category` FOREIGN KEY (`Instrument_Category_id`) REFERENCES `instrument_category` (`id`))
-[INFO ] 2018-03-25 15:50:24.830 [main] AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
-[ERROR] 2018-03-25 15:50:24.830 [main] ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
-[WARN ] 2018-03-25 15:50:30.799 [main] SqlExceptionHelper - SQL Error: 1451, SQLState: 23000
-[ERROR] 2018-03-25 15:50:30.799 [main] SqlExceptionHelper - Cannot delete or update a parent row: a foreign key constraint fails (`test_concertplanner`.`composition`, CONSTRAINT `Composition_Composer` FOREIGN KEY (`Composer_id`) REFERENCES `composer` (`id`))
-[INFO ] 2018-03-25 15:50:30.799 [main] AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
-[ERROR] 2018-03-25 15:50:30.799 [main] ExceptionMapperStandardImpl - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
-=======
-[INFO ] 2018-03-25 16:18:50.478 [http-nio-8080-exec-4] Version - HHH000412: Hibernate Core {5.2.12.Final}
-[INFO ] 2018-03-25 16:18:50.482 [http-nio-8080-exec-4] Environment - HHH000206: hibernate.properties not found
-[INFO ] 2018-03-25 16:18:52.071 [http-nio-8080-exec-4] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-[INFO ] 2018-03-25 16:18:52.671 [http-nio-8080-exec-4] C3P0ConnectionProvider - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://localhost:3306/concertPlanner
-[INFO ] 2018-03-25 16:18:52.672 [http-nio-8080-exec-4] C3P0ConnectionProvider - HHH10001001: Connection properties: {user=root, password=****}
-[INFO ] 2018-03-25 16:18:52.672 [http-nio-8080-exec-4] C3P0ConnectionProvider - HHH10001003: Autocommit mode: false
-[INFO ] 2018-03-25 16:18:53.342 [http-nio-8080-exec-4] C3P0ConnectionProvider - HHH10001007: JDBC isolation level: <unknown>
-[INFO ] 2018-03-25 16:18:54.716 [http-nio-8080-exec-4] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-[INFO ] 2018-03-25 16:19:00.636 [http-nio-8080-exec-4] QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
->>>>>>> master
+[INFO ] 2018-03-28 20:10:20.579 [http-nio-8080-exec-4] Version - HHH000412: Hibernate Core {5.2.12.Final}
+[INFO ] 2018-03-28 20:10:20.583 [http-nio-8080-exec-4] Environment - HHH000206: hibernate.properties not found
+[INFO ] 2018-03-28 20:10:21.170 [http-nio-8080-exec-4] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 2018-03-28 20:10:21.413 [http-nio-8080-exec-1] C3P0ConnectionProvider - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://localhost:3306/concertPlanner
+[INFO ] 2018-03-28 20:10:21.414 [http-nio-8080-exec-4] C3P0ConnectionProvider - HHH010002: C3P0 using driver: com.mysql.jdbc.Driver at URL: jdbc:mysql://localhost:3306/concertPlanner
+[INFO ] 2018-03-28 20:10:21.414 [http-nio-8080-exec-1] C3P0ConnectionProvider - HHH10001001: Connection properties: {user=root, password=****}
+[INFO ] 2018-03-28 20:10:21.414 [http-nio-8080-exec-4] C3P0ConnectionProvider - HHH10001001: Connection properties: {user=root, password=****}
+[INFO ] 2018-03-28 20:10:21.414 [http-nio-8080-exec-1] C3P0ConnectionProvider - HHH10001003: Autocommit mode: false
+[INFO ] 2018-03-28 20:10:21.414 [http-nio-8080-exec-4] C3P0ConnectionProvider - HHH10001003: Autocommit mode: false
+[INFO ] 2018-03-28 20:10:21.824 [http-nio-8080-exec-4] C3P0ConnectionProvider - HHH10001007: JDBC isolation level: <unknown>
+[INFO ] 2018-03-28 20:10:21.835 [http-nio-8080-exec-1] C3P0ConnectionProvider - HHH10001007: JDBC isolation level: <unknown>
+[INFO ] 2018-03-28 20:10:22.574 [http-nio-8080-exec-4] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[INFO ] 2018-03-28 20:10:22.574 [http-nio-8080-exec-1] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[INFO ] 2018-03-28 20:10:24.313 [http-nio-8080-exec-4] QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 2018-03-28 20:10:24.313 [http-nio-8080-exec-1] QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory

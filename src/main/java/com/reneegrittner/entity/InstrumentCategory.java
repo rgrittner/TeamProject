@@ -85,7 +85,7 @@ public class InstrumentCategory {
     /**
      * Add Instrument.
      *
-     * @param instrument the composer
+     * @param instrument the instrument
      */
     public void addInstrument(Instrument instrument) {
         instruments.add(instrument);

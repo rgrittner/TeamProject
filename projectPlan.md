@@ -15,6 +15,6 @@
 - [X] determined scope
 - [X] all team members have contributed rights to team repository
 - [X] resolved configuration conflicts
-
+- [ ] Figure out the documentation, best practices, who will write what
 
 

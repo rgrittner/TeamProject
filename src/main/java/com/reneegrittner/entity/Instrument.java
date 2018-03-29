@@ -27,8 +27,8 @@ public class Instrument {
     @JoinColumn(name = "Instrument_Category_id", foreignKey = @ForeignKey(name = "Instrument_Instrument_Category"))
     private InstrumentCategory instrumentCategory;
 
-    @OneToMany(mappedBy = "instrument", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<CompositionInstrument> listOfCompositions;
+   // @OneToMany(mappedBy = "instrument", cascade = CascadeType.ALL, orphanRemoval = true)
+   // private List<CompositionInstrument> listOfCompositions;
 
     /**
      * Instantiates a new Instrument.
@@ -107,18 +107,16 @@ public class Instrument {
      *
      * @return the list of compositions
      */
-    public List<CompositionInstrument> getListOfCompositions() {
-        return listOfCompositions;
-    }
+   // public List<CompositionInstrument> getListOfCompositions() {return listOfCompositions;}
 
     /**
      * Sets list of compositions.
      *
-     * @param listOfCompositions the list of compositions
+     //* @param listOfCompositions the list of compositions
      */
-    public void setListOfCompositions(List<CompositionInstrument> listOfCompositions) {
-        this.listOfCompositions = listOfCompositions;
-    }
+//    public void setListOfCompositions(List<CompositionInstrument> listOfCompositions) {
+//        this.listOfCompositions = listOfCompositions;
+//    }
 
     @Override
     public String toString() {
