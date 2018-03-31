@@ -55,5 +55,7 @@ public class Nationalities {
         return Response.status(200).entity(jsonToReturn).build();
     }
 
+
+
 }
 
