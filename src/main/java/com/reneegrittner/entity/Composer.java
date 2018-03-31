@@ -33,11 +33,11 @@ public class Composer {
     @Column(name = "death_year")
     private Integer deathYear;
 
-    @JsonManagedReference
+    //@JsonManagedReference
     @ManyToOne
     private Nationality nationality;
 
-    @JsonIgnoreProperties("composer")
+    //@JsonIgnoreProperties("composer")
     @OneToMany(mappedBy = "composer", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     private Set<Composition> compositions = new HashSet<>();
 
