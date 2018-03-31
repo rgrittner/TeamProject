@@ -161,4 +161,14 @@ public class GenericDao<T> {
     private Session getSession(){
         return SessionFactoryProvider.getSessionFactory().openSession();
     }
+
+    public List<T> getByPropertyEqualCompositionInstrument(Object playerNumber, Object compositionId){
+        Session session = getSession();
+        CriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<T> query = builder.createQuery(type);
+        Root<T> root = query.from(type);
+        query.select(root).where(builder.equal(root.get("playerNumber"), playerNumber)).having(builder.equal(root.get("composition"), compositionId));
+        List<T> list = session.createQuery(query).getResultList();
+        return list;
+    }
 }

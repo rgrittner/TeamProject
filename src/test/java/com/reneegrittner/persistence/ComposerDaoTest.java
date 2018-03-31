@@ -115,10 +115,5 @@ public class ComposerDaoTest {
         assertEquals("org.hibernate.exception.ConstraintViolationException: could not execute statement", exception.getMessage());
     }
 
-    @Test
-    void anotherDamnTest(){
-        GenericDao<InstrumentCategory> fuckingDao = new GenericDao<>(InstrumentCategory.class);
-        List<InstrumentCategory> ic = fuckingDao.getByPropertyEqual("category", "Wood");
-        assertEquals(1, ic.size());
-    }
+
 }
