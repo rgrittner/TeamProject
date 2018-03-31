@@ -37,9 +37,9 @@ public class Composer {
     @ManyToOne
     private Nationality nationality;
 
-   // @JsonIgnoreProperties("composer")
-    //@OneToMany(mappedBy = "composer", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
-    //private Set<Composition> compositions = new HashSet<>();
+    @JsonIgnoreProperties("composer")
+    @OneToMany(mappedBy = "composer", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    private Set<Composition> compositions = new HashSet<>();
 
 
     /**
@@ -56,11 +56,11 @@ public class Composer {
 
      * @param nationality the nationality
      */
-//    public Composer(String firstName, String lastName, Nationality nationality) {
-//        this.firstName = firstName;
-//        this.lastName = lastName;
-//        this.nationality = nationality;
-//    }
+    public Composer(String firstName, String lastName, Nationality nationality) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.nationality = nationality;
+    }
 
     public Composer(String firstName, String lastName, Integer birthYear, Integer deathYear, Nationality nationality) {
         this.firstName = firstName;
@@ -179,19 +179,19 @@ public class Composer {
     }
 
 
-   // public Set<Composition> getCompositions() { return compositions; }
+    public Set<Composition> getCompositions() { return compositions; }
 
-  //  public void setCompositions(Set<Composition> compositions) {this.compositions = compositions;}
+    public void setCompositions(Set<Composition> compositions) {this.compositions = compositions;}
 
-//    public void addComposition(Composition composition) {
-//        compositions.add(composition);
-//        composition.setComposer(this);
-//    }
+    public void addComposition(Composition composition) {
+        compositions.add(composition);
+        composition.setComposer(this);
+    }
 
-//    public void removeComposition(Composition composition) {
-//        compositions.add(composition);
-//        composition.setComposer(null);
-//    }
+    public void removeComposition(Composition composition) {
+        compositions.add(composition);
+        composition.setComposer(null);
+    }
 
     @Override
     public String toString() {
