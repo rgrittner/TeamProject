@@ -44,7 +44,7 @@ public class Instruments {
     @Path("/xml")
     @Produces({MediaType.APPLICATION_XML})
     public Response retrieveAllInstrumentsXml() throws IOException {
-
+        logger.debug("fo shizzle");
         List<Instrument> instrumentResultSet = dao.getAll();
 
         XmlMapper mapper = new XmlMapper();
@@ -58,11 +58,12 @@ public class Instruments {
     @Path("/{param}/json")
     @Produces({MediaType.APPLICATION_JSON})
     public Response composersOfProvidedNationalityJson(@PathParam("param") String instrumentCategory) throws JsonProcessingException {
-        GenericDao localDao = new GenericDao(InstrumentCategory.class);
+        GenericDao<InstrumentCategory> localDao = new GenericDao<>(InstrumentCategory.class);
         int categoryId = 0;
 
+
         // Search by property, this returns a list
-        List<InstrumentCategory> categoryList = localDao.getByPropertyEqual("instrumentCategory", instrumentCategory);
+        List<InstrumentCategory> categoryList = localDao.getByPropertyEqual("category", instrumentCategory);
         logger.debug(categoryList);
 
         //Error handling? Continue if there is only one result in the list
@@ -73,7 +74,7 @@ public class Instruments {
 
             // Now query for list of composers using the ID
             List<Instrument> instrumentOfSpecificCategoryResultsSet = dao.getByPropertyEqual("instrumentCategory", categoryId);
-
+        logger.debug("What dis homie?" + instrumentOfSpecificCategoryResultsSet);
             ObjectMapper objectMapper = new ObjectMapper();
             objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
 
@@ -98,7 +99,7 @@ public class Instruments {
         int categoryId = 0;
 
         // Search by property, this returns a list
-        List<InstrumentCategory> categoryList = localDao.getByPropertyEqual("instrumentCategory", instrumentCategory);
+        List<InstrumentCategory> categoryList = localDao.getByPropertyEqual("category", instrumentCategory);
         logger.debug(categoryList);
 
         //Error handling? Continue if there is only one result in the list
