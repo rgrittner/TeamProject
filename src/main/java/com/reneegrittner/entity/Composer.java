@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -12,6 +14,7 @@ import java.util.Set;
 /**
  * The type Composer.
  */
+@XmlRootElement
 @Entity(name = "Composer")
 @Table(name = "Composer")
 public class Composer {
@@ -33,11 +36,12 @@ public class Composer {
     @Column(name = "death_year")
     private Integer deathYear;
 
-    //@JsonManagedReference
+    @JsonManagedReference
     @ManyToOne
     private Nationality nationality;
 
-    //@JsonIgnoreProperties("composer")
+    @XmlTransient
+    @JsonIgnoreProperties("composer")
     @OneToMany(mappedBy = "composer", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     private Set<Composition> compositions = new HashSet<>();
 

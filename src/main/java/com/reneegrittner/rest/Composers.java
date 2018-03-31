@@ -48,11 +48,12 @@ public class Composers {
     public Response retrieveAllComposersXml() throws IOException {
 
         List<Composer> composerResultSet = dao.getAll();
-
+        logger.debug("slkj" + composerResultSet);
         XmlMapper mapper = new XmlMapper();
         mapper.enable(SerializationFeature.INDENT_OUTPUT);
 
         String jsonToReturn = mapper.writeValueAsString(composerResultSet);
+        logger.debug("whats this" + jsonToReturn);
         return Response.status(200).entity(jsonToReturn).build();
     }
 

@@ -5,9 +5,11 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 import java.util.List;
 import java.util.Objects;
-
+@XmlRootElement
 @Entity(name = "Composition")
 @Table(name = "Composition")
 public class Composition {
@@ -40,6 +42,7 @@ public class Composition {
 
 
     @ManyToOne
+    @XmlTransient
     private Composer composer;
 
     @JsonIgnoreProperties("composer")
