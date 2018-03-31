@@ -22,7 +22,8 @@ public class RestDriver extends Application {
         h.add(Composers.class );
         h.add(Nationalities.class);
         h.add(Instruments.class);
-        h.add(InstrumentCategory.class);
+        h.add(InstrumentCategories.class);
+        
 
         return h;
     }
