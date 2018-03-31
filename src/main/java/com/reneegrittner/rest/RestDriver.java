@@ -1,5 +1,8 @@
 package com.reneegrittner.rest;
 
+import com.reneegrittner.entity.Instrument;
+import com.reneegrittner.entity.InstrumentCategory;
+
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 import java.util.HashSet;
@@ -18,11 +21,12 @@ public class RestDriver extends Application {
         HashSet h = new HashSet<Class<?>>();
         h.add(Composers.class );
         h.add(Nationalities.class);
-        h.add(Musicians.class);
+        h.add(Instruments.class);
+        h.add(InstrumentCategories.class);
+
 
         return h;
     }
 
 }
-
 
