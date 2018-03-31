@@ -1,6 +1,7 @@
 package com.reneegrittner.persistence;
 
 import com.reneegrittner.entity.Composer;
+import com.reneegrittner.entity.InstrumentCategory;
 import com.reneegrittner.entity.Nationality;
 import com.reneegrittner.util.DatabaseTwo;
 import org.apache.logging.log4j.LogManager;
@@ -112,5 +113,12 @@ public class ComposerDaoTest {
             genericDao.delete(genericDao.getById(1));
         });
         assertEquals("org.hibernate.exception.ConstraintViolationException: could not execute statement", exception.getMessage());
+    }
+
+    @Test
+    void anotherDamnTest(){
+        GenericDao<InstrumentCategory> fuckingDao = new GenericDao<>(InstrumentCategory.class);
+        List<InstrumentCategory> ic = fuckingDao.getByPropertyEqual("category", "Wood");
+        assertEquals(1, ic.size());
     }
 }
