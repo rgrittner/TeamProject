@@ -5,6 +5,9 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlTransient;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -17,6 +20,7 @@ import java.util.Set;
  */
 @Entity(name = "InstrumentCategory")
 @Table(name = "Instrument_Category")
+@XmlAccessorType( XmlAccessType.FIELD)
 public class InstrumentCategory {
 
     @Id
@@ -30,7 +34,7 @@ public class InstrumentCategory {
     @JsonIgnoreProperties("instrument")
     @JsonBackReference
     @OneToMany(mappedBy = "instrumentCategory", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
-
+    @XmlTransient
     private Set<Instrument> instruments = new HashSet<>();
 
     /**

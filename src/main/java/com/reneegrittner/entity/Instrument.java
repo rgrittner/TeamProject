@@ -4,6 +4,9 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlTransient;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,6 +17,7 @@ import java.util.Objects;
  */
 @Entity(name = "Instrument")
 @Table(name = "Instrument")
+@XmlAccessorType( XmlAccessType.FIELD)
 public class Instrument {
 
     @Id
@@ -26,10 +30,12 @@ public class Instrument {
 
     @JsonManagedReference
     @ManyToOne
+    //@XmlTransient
     @JoinColumn(name = "Instrument_Category_id", foreignKey = @ForeignKey(name = "Instrument_Instrument_Category"))
     private InstrumentCategory instrumentCategory;
 
     @OneToMany(mappedBy = "instrument", cascade = CascadeType.ALL, orphanRemoval = true)
+    //@XmlTransient
     private List<CompositionInstrument> listOfCompositions;
 
     /**

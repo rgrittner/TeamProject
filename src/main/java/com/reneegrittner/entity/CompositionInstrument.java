@@ -1,12 +1,19 @@
 package com.reneegrittner.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlTransient;
 import java.util.Objects;
-
 @Entity(name = "CompositionInstrument")
 @Table(name = "Composition_Instrument")
+@XmlAccessorType( XmlAccessType.FIELD)
 public class CompositionInstrument {
 
     @Id
@@ -21,9 +28,11 @@ public class CompositionInstrument {
     private int instumentQuantity;
 
     @ManyToOne
+    //@XmlTransient
     private Instrument instrument;
 
     @ManyToOne
+    //@XmlTransient
     private Composition composition;
 
     public CompositionInstrument() {
