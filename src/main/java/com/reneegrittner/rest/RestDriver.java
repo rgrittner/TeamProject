@@ -1,5 +1,7 @@
 package com.reneegrittner.rest;
 
+import com.reneegrittner.entity.Composition;
+import com.reneegrittner.entity.CompositionInstrument;
 import com.reneegrittner.entity.Instrument;
 import com.reneegrittner.entity.InstrumentCategory;
 
@@ -23,6 +25,8 @@ public class RestDriver extends Application {
         h.add(Nationalities.class);
         h.add(Instruments.class);
         h.add(InstrumentCategories.class);
+        h.add(Composition.class);
+        h.add(CompositionInstrument.class);
         
 
         return h;

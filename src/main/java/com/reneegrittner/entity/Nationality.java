@@ -6,6 +6,9 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlTransient;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -18,6 +21,7 @@ import java.util.Set;
  */
 @Entity(name = "Nationality")
 @Table(name = "Nationality")
+@XmlAccessorType( XmlAccessType.FIELD)
 public class Nationality {
 
     @Id
@@ -31,6 +35,7 @@ public class Nationality {
     @JsonIgnoreProperties("composer")
     @JsonBackReference
     @OneToMany(mappedBy = "nationality", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @XmlTransient
     private Set<Composer> composers = new HashSet<>();
 
     /**

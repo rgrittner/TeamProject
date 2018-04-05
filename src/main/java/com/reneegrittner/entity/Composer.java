@@ -2,9 +2,15 @@ package com.reneegrittner.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -14,6 +20,7 @@ import java.util.Set;
  */
 @Entity(name = "Composer")
 @Table(name = "Composer")
+@XmlAccessorType( XmlAccessType.FIELD)
 public class Composer {
 
     @Id
@@ -35,10 +42,13 @@ public class Composer {
 
     @JsonManagedReference
     @ManyToOne
+    //@XmlTransient
     private Nationality nationality;
+
 
     @JsonIgnoreProperties("composer")
     @OneToMany(mappedBy = "composer", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    @XmlTransient
     private Set<Composition> compositions = new HashSet<>();
 
 
