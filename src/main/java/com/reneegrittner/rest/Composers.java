@@ -1,14 +1,12 @@
 package com.reneegrittner.rest;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.reneegrittner.entity.Composer;
 import com.reneegrittner.entity.Nationality;
 import com.reneegrittner.persistence.GenericDao;
-import jdk.nashorn.internal.objects.annotations.Getter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
