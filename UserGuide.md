@@ -1,63 +1,99 @@
 **Database Translator**
 ----
-
 The Database Translator service submits SQL queries to user databases and translates the result set into the user's
  preferred language, either XML or JSON. 
  
-* **URL**
+ **URL**
 
   /`[Class]`/`[Query parameter]`/`[Language]`/
 
-* **Method:**
+ **Method:**
 
   `GET` 
   
-*  **URL Params**
+  **URL Params**
    
-    `Class`
-    
-    `Query parameter`
+  `Class`
+  
+  `Query parameter`
 
-    `Language`
+  `Language`
    
 
    **Required:**
  
-   `Class=[Object]`
+   `Class: Object`
    
-   `Language=[JSON, XML]`
+   `Language: JSON, XML`
 
    **Optional:**
  
-   `photo_id=[alphanumeric]`
+   `Query Parameter`
 
-* **Data Params**
+<!--* **Data Params**
 
   <_If making a post request, what should the body payload look like? URL Params rules apply here too._>
-
-* **Success Response:**
+-->
+ **Success Response:**
   
-  <_What should the status code be on success and is there any returned data? This is useful when people need to to know what their callbacks should expect!_>
+   **Code:** 200 <br />
+  **Sample Content:** 
+        
+         {
+         
+         0:
+         id:	1
+         firstName:	"John"
+         lastName:	"Smith"
+         birthYear:	1965
+         deathYear:	1999
+         nationality:	
+           id:	1
+           nationality:	"American"
+         compositions:
+           0:
+             id:	1
+             title:	"Gravity"
+             arranger:	""
+             duration:	10
+             yearComposed:	2008
+             numberOfPlayers:	4
+             notes:	"Commissioned"
+  
+         
+         }
+     
+ **Error Response:**
 
-  * **Code:** 200 <br />
-    **Content:** `{ id : 12 }`
- 
-* **Error Response:**
+(The error message Xinan is coding)
 
-  <_Most endpoints will have many ways they can fail. From unauthorized access, to wrongful parameters etc. All of those should be liste d here. It might seem repetitive, but it helps prevent assumptions from being made where they should be._>
-
-  * **Code:** 401 UNAUTHORIZED <br />
-    **Content:** `{ error : "Log in" }`
-
+   **Code:** 401 UNAUTHORIZED <br />
+   
+  **Content:** `{ error : "Log in" }`
+<!--
   OR
 
   * **Code:** 422 UNPROCESSABLE ENTRY <br />
-    **Content:** `{ error : "Email Invalid" }`
+  **Content:** `{ error : "Email Invalid" }`
+-->
+ **Sample Use:**
 
-* **Sample Call:**
+  `/services/Instruments/String/json`
+  
+  or
+  
+  `/services/Composers/American/xml`
+  
+   or 
+   
+   `/services/Instruments/json`
+   
+ **Notes:**
 
-  <_Just a sample call to your endpoint in a runnable format ($.ajax call or a curl request) - this makes life easier and more predictable._> 
-
-* **Notes:**
-
-  <_This is where all uncertainties, commentary, discussion etc. can go. I recommend timestamping and identifying oneself when leaving comments here._> 
+   Parameters are not required; if the query parameter does not return any results,
+    the service will return an empty result set (JSON or XML). When parameters are
+    omitted, the service will return  a result set
+    equal to querying for all results of a certain class. 
+    
+   At this time, only XML and JSON are supported anguages for the result set translation. 
+   A future iteration may include HTML. 
