@@ -11,7 +11,7 @@
         <!--<property name="connection.password">allege3@insemination</property>-->
 
         <property name="connection.username">root</property>
-        <property name="connection.password">student</property>
+        <property name="connection.password">7u8i9o0p</property>
 
         <property name="hibernate.c3p0.min_size">5</property>
         <property name="hibernate.c3p0.max_size">20</property>
@@ -20,7 +20,6 @@
         <property name="hibernate.c3p0.idle_test_period">3000</property>
 
         <mapping class="com.reneegrittner.entity.Nationality"/>
-        <mapping class="com.reneegrittner.entity.Musician"/>
         <mapping class="com.reneegrittner.entity.Composer"/>
         <mapping class="com.reneegrittner.entity.InstrumentCategory"/>
         <mapping class="com.reneegrittner.entity.Instrument" />
