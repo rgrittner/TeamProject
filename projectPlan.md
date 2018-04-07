@@ -1,11 +1,10 @@
 # Project Plan (Due 4/10)
 
 ### Renee
-- [ ] implement composition_instrument REST class
+- [X] implement composition_instrument REST class
 
 ### Nicole
-- [ ] implement instrument_category REST class
-
+- [X] implement instrument_category REST class
 
 ### Xinan
 - [X] implement instrument REST class
@@ -15,6 +14,7 @@
 - [X] determined scope
 - [X] all team members have contributed rights to team repository
 - [X] resolved configuration conflicts
-- [ ] Figure out the documentation, best practices, who will write what
+- [X] Figure out the documentation, best practices, who will write what
+
 
 
