@@ -21,7 +21,7 @@
         <jsp:include page="banner.jsp" />
         <div class="content-wrap">
             <div class="main-title">
-                <ul class="grid effect-8" id="grid">
+                <ul class="grid effect-8" id="error">
                     <li ><h1>General Error</h1>
                         <h4>You have reached an error page!<br>
                             Please make sure you have access to the webpage you are requesting.</h4></li>
