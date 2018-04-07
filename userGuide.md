@@ -6,6 +6,7 @@ The Database Translator service submits SQL queries to user databases and transl
  **URL**
 
   /`[Class]`/`[Query parameter]`/`[Language]`/
+  
   /`[Class]`/`[Language]`/
 
  **Method:**
