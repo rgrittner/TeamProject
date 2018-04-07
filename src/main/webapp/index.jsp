@@ -29,18 +29,18 @@
                 <li><a href="/concertPlanner/addComposer">Add a Composer</a></li>
                 <li><a href="/concertPlanner/compositions">Get All Compositions</a></li>
                 -->
-                <li><a href="/concertPlanner/services/Composers/json">All Composers (JSON)</a></li>
-                <li><a href="/concertPlanner/services/Composers/xml">All Composers (XML)</a></li>
-                <li><a href="/concertPlanner/services/Composers/American/json">American Composers (JSON)</a></li>
-                <li><a href="/concertPlanner/services/Composers/American/xml">American Composers (XML)</a></li>
-                <li><a href="/concertPlanner/services/Instruments/json">All Instruments (JSON)</a></li>
-                <li><a href="/concertPlanner/services/Instruments/xml">All Instruments (XML)</a></li>
-                <li><a href="/concertPlanner/services/Instruments/String/json">All String Instruments (JSON)</a></li>
-                <li><a href="/concertPlanner/services/Instruments/String/xml">All String Instruments (XML)</a></li>
-                <li><a href="/concertPlanner/services/InstrumentCategories/json">All Instrument Categories (JSON)</a></li>
-                <li><a href="/concertPlanner/services/InstrumentCategories/xml">All Instrument Categories (XML)</a></li>
-                <li><a href="/concertPlanner/services/Nationalities/json">All Nationalities (JSON)</a></li>
-                <li><a href="/concertPlanner/services/Nationalities/xml">All Nationalities (XML)</a></li>
+                <li><a href="/teamProject/services/Composers/json">All Composers (JSON)</a></li>
+                <li><a href="/teamProject/services/Composers/xml">All Composers (XML)</a></li>
+                <li><a href="/teamProject/services/Composers/American/json">American Composers (JSON)</a></li>
+                <li><a href="/teamProject/services/Composers/American/xml">American Composers (XML)</a></li>
+                <li><a href="/teamProject/services/Instruments/json">All Instruments (JSON)</a></li>
+                <li><a href="/teamProject/services/Instruments/xml">All Instruments (XML)</a></li>
+                <li><a href="/teamProject/services/Instruments/String/json">All String Instruments (JSON)</a></li>
+                <li><a href="/teamProject/services/Instruments/String/xml">All String Instruments (XML)</a></li>
+                <li><a href="/teamProject/services/InstrumentCategories/json">All Instrument Categories (JSON)</a></li>
+                <li><a href="/teamProject/services/InstrumentCategories/xml">All Instrument Categories (XML)</a></li>
+                <li><a href="/teamProject/services/Nationalities/json">All Nationalities (JSON)</a></li>
+                <li><a href="/teamProject/services/Nationalities/xml">All Nationalities (XML)</a></li>
             </ul>
 
         </div>
