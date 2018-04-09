@@ -11,7 +11,11 @@
         <!--<property name="connection.password">allege3@insemination</property>-->
 
         <property name="connection.username">root</property>
+<<<<<<< HEAD
         <property name="connection.password">7u8i9o0p</property>
+=======
+        <property name="connection.password">wreb7ce</property>
+>>>>>>> master
 
         <property name="hibernate.c3p0.min_size">5</property>
         <property name="hibernate.c3p0.max_size">20</property>

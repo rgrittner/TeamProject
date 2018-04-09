@@ -13,6 +13,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import java.util.List;
 import java.util.Objects;
+
+/**
+ * The type Composition.
+ */
 @XmlAccessorType( XmlAccessType.FIELD)
 @Entity(name = "Composition")
 @Table(name = "Composition")
@@ -46,7 +50,6 @@ public class Composition {
 
 
     @ManyToOne
-    //@XmlTransient
     private Composer composer;
 
     @JsonIgnoreProperties("composer")
@@ -55,10 +58,24 @@ public class Composition {
     private List<CompositionInstrument> listOfInstruments;
 
 
-
+    /**
+     * Instantiates a new Composition.
+     */
     public Composition() {
     }
 
+    /**
+     * Instantiates a new Composition.
+     *
+     * @param title            the title
+     * @param arranger         the arranger
+     * @param duration         the duration
+     * @param yearComposed     the year composed
+     * @param numberOfPlayers  the number of players
+     * @param notes            the notes
+     * @param clocksCommission the clocks commission
+     * @param composer         the composer
+     */
     public Composition(String title, String arranger, Integer duration, Integer yearComposed, Integer numberOfPlayers, String notes, boolean clocksCommission, Composer composer) {
         this.title = title;
         this.arranger = arranger;
@@ -70,74 +87,164 @@ public class Composition {
         this.composer = composer;
     }
 
+    /**
+     * Gets id.
+     *
+     * @return the id
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * Sets id.
+     *
+     * @param id the id
+     */
     public void setId(int id) {
         this.id = id;
     }
 
+    /**
+     * Gets title.
+     *
+     * @return the title
+     */
     public String getTitle() {
         return title;
     }
 
+    /**
+     * Sets title.
+     *
+     * @param title the title
+     */
     public void setTitle(String title) {
         this.title = title;
     }
 
+    /**
+     * Gets arranger.
+     *
+     * @return the arranger
+     */
     public String getArranger() {
         return arranger;
     }
 
+    /**
+     * Sets arranger.
+     *
+     * @param arranger the arranger
+     */
     public void setArranger(String arranger) {
         this.arranger = arranger;
     }
 
+    /**
+     * Gets duration.
+     *
+     * @return the duration
+     */
     public Integer getDuration() {
         return duration;
     }
 
+    /**
+     * Sets duration.
+     *
+     * @param duration the duration
+     */
     public void setDuration(Integer duration) {
         this.duration = duration;
     }
 
+    /**
+     * Gets year composed.
+     *
+     * @return the year composed
+     */
     public Integer getYearComposed() {
         return yearComposed;
     }
 
+    /**
+     * Sets year composed.
+     *
+     * @param yearComposed the year composed
+     */
     public void setYearComposed(Integer yearComposed) {
         this.yearComposed = yearComposed;
     }
 
+    /**
+     * Gets number of players.
+     *
+     * @return the number of players
+     */
     public Integer getNumberOfPlayers() {
         return numberOfPlayers;
     }
 
+    /**
+     * Sets number of players.
+     *
+     * @param numberOfPlayers the number of players
+     */
     public void setNumberOfPlayers(Integer numberOfPlayers) {
         this.numberOfPlayers = numberOfPlayers;
     }
 
+    /**
+     * Gets notes.
+     *
+     * @return the notes
+     */
     public String getNotes() {
         return notes;
     }
 
+    /**
+     * Sets notes.
+     *
+     * @param notes the notes
+     */
     public void setNotes(String notes) {
         this.notes = notes;
     }
 
+    /**
+     * Is clocks commission boolean.
+     *
+     * @return the boolean
+     */
     public boolean isClocksCommission() {
         return clocksCommission;
     }
 
+    /**
+     * Sets clocks commission.
+     *
+     * @param clocksCommission the clocks commission
+     */
     public void setClocksCommission(boolean clocksCommission) {
         this.clocksCommission = clocksCommission;
     }
 
+    /**
+     * Gets composer.
+     *
+     * @return the composer
+     */
     public Composer getComposer() {
         return composer;
     }
 
+    /**
+     * Sets composer.
+     *
+     * @param composer the composer
+     */
     public void setComposer(Composer composer) {
         this.composer = composer;
     }

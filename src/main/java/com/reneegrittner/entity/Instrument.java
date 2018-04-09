@@ -30,12 +30,10 @@ public class Instrument {
 
     @JsonManagedReference
     @ManyToOne
-    //@XmlTransient
     @JoinColumn(name = "Instrument_Category_id", foreignKey = @ForeignKey(name = "Instrument_Instrument_Category"))
     private InstrumentCategory instrumentCategory;
 
     @OneToMany(mappedBy = "instrument", cascade = CascadeType.ALL, orphanRemoval = true)
-    //@XmlTransient
     private List<CompositionInstrument> listOfCompositions;
 
     /**
@@ -119,8 +117,6 @@ public class Instrument {
 
     /**
      * Sets list of compositions.
-     *
-     //* @param listOfCompositions the list of compositions
      */
     public void setListOfCompositions(List<CompositionInstrument> listOfCompositions) {
         this.listOfCompositions = listOfCompositions;

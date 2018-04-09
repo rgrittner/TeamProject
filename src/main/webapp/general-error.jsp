@@ -9,7 +9,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 <jsp:include page="head.jsp" />
+=======
+<jsp:include page="../head.jsp" />
+>>>>>>> master
 
 <body>
 <div class="container page-styling">
@@ -17,11 +21,19 @@
         <div class="site-name">
             <h1>Percussion Concert Planner</h1>
         </div>
+<<<<<<< HEAD
         <jsp:include page="nav.jsp" />
         <jsp:include page="banner.jsp" />
         <div class="content-wrap">
             <div class="main-title">
                 <ul class="grid effect-8" id="grid">
+=======
+        <jsp:include page="../nav.jsp" />
+        <jsp:include page="../banner.jsp" />
+        <div class="content-wrap">
+            <div class="main-title">
+                <ul class="grid effect-8" id="error">
+>>>>>>> master
                     <li ><h1>General Error</h1>
                         <h4>You have reached an error page!<br>
                             Please make sure you have access to the webpage you are requesting.</h4></li>
@@ -46,6 +58,7 @@
         </div>
 
 
+<<<<<<< HEAD
     <div class="container">
         <div class="copy-rights">
             Copyright(c) website name.<br>
@@ -57,3 +70,15 @@
 </body>
 </html>
 
+=======
+        <div class="container">
+            <div class="copy-rights">
+                Copyright(c) website name.<br>
+                Designed by:<a href="http://www.alltemplateneeds.com"> www.alltemplateneeds.com</a>  /  Images from:<a href="http://www.wallpaperswide.com"> www.wallpaperswide.com</a>
+            </div>
+        </div>
+
+        <jsp:include page="../scripts.jsp" />
+</body>
+</html>
+>>>>>>> master

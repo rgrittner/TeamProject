@@ -21,12 +21,24 @@ import java.io.IOException;
 import java.util.List;
 
 
+/**
+ * The type Nationalities.
+ */
 @Path("/Nationalities")
 
 public class Nationalities {
     private final Logger logger = LogManager.getLogger(this.getClass());
+    /**
+     * The Dao.
+     */
     GenericDao<Nationality> dao = new GenericDao<>(Nationality.class);
 
+    /**
+     * Retrieve all nationalities json response.
+     *
+     * @return the response
+     * @throws IOException the io exception
+     */
     @GET
     @Path("/json")
     @Produces({MediaType.APPLICATION_JSON})
@@ -41,6 +53,12 @@ public class Nationalities {
         return Response.status(200).entity(jsonToReturn).build();
     }
 
+    /**
+     * Retrieve all nationalities xml response.
+     *
+     * @return the response
+     * @throws IOException the io exception
+     */
     @GET
     @Path("/xml")
     @Produces({MediaType.APPLICATION_XML})
