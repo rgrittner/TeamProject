@@ -14,21 +14,81 @@
         <jsp:include page="banner.jsp" />
     <div class="content-wrap">
         <div class="main-title">
+            <div>
+                <h1>User Guide</h1>
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <td>Table</td>
+                            <td>Function</td>
+                            <td>Method</td>
+                            <td>Description</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nationality</td>
+                            <td>/services/Nationalities/xml<br>/services/Nationality/json</td>
+                            <td>GET</td>
+                            <td>Lists all Nationalities </td>
+                        </tr>
+                    <tr>
+                        <td>Composer</td>
+                        <td>/services/Composers/xml<br>/services/Composers/json</td>
+                        <td>GET</td>
+                        <td>List all Composers</td>
+                    </tr>
+                    <tr>
+                       <td>Composer</td>
+                       <td>/services/Composers/{Nationality}/xml<br>/services/Composers/{Nationality}/json</td>
+                       <td>GET</td>
+                       <td>Lists all composers of given nationality</td>
+                    </tr>
+                        <tr>
+                            <td>Composer</td>
+                            <td>/services/Composers/lastName/{lastName}/xml<br>/services/Composers/lastName/{lastName}/json</td>
+                            <td>GET</td>
+                            <td>Lists all composers of given last name</td>
+                        </tr>
+                    <tr>
+                       <td>InstrumentCategory</td>
+                       <td>/services/InstrumentCategories/xml<br>/services/InstrumentCategories/json</td>
+                       <td>GET</td>
+                       <td>Lists all instrument categories</td>
+                    </tr>
+                    <tr>
+                       <td>Instruments</td>
+                       <td>/services/Instruments/xml<br>/services/Instruments/json</td>
+                       <td>GET</td>
+                       <td>Lists all instruments</td>
+                    </tr>
+                        <tr>
+                            <td>Instruments</td>
+                            <td>/services/Instruments/{instrument}/xml<br>/services/Instruments/{instrument}/json</td>
+                            <td>GET</td>
+                            <td>View an individual instrument by name</td>
+                        </tr>
+                        <tr>
+                            <td>Compositions</td>
+                            <td>/services/Compositions/xml<br>/services/Compositions/json</td>
+                            <td>GET</td>
+                            <td>View all compositions</td>
+                        </tr>
+                        <tr>
+                            <td>Compositions</td>
+                            <td>/services/Compositions/title/{title}/xml<br>/services/Compositions/title/{title}/json</td>
+                            <td>GET</td>
+                            <td>View compositions by provided title</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <ul class="grid effect-8" id="grid">
-                <li ><h1>Lorem ipsum</h1>
-                    <h4>Donec nec justo eget felis facilisis fermentum.<br>
-                        Aliquam porttit or mauris sit amet orci. Aenean dignissim pellentesque felis.</h4></li>
+                <li ><h1>Sample REST calls</h1>
+                    </li>
             </ul>
             <ul class="grid effect-8" id="grid">
-                <!--
-                <li><a href="/concertPlanner/services/jsonComposer">JSON Composer</a></li>
-                <li><a href="/concertPlanner/services/jsonNationality">JSON Nationality</a></li>
-                <li><a href="/concertPlanner/musicians">Get All Musicians</a></li>
-                <li><a href="/concertPlanner/addMusician">Add a Musician</a></li>
-                <li><a href="/concertPlanner/composers">Get All Composers</a></li>
-                <li><a href="/concertPlanner/addComposer">Add a Composer</a></li>
-                <li><a href="/concertPlanner/compositions">Get All Compositions</a></li>
-                -->
+
                 <li><a href="/teamProject/services/Composers/json">All Composers (JSON)</a></li>
                 <li><a href="/teamProject/services/Composers/xml">All Composers (XML)</a></li>
                 <li><a href="/teamProject/services/Composers/American/json">American Composers (JSON)</a></li>

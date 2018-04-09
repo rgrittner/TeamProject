@@ -42,7 +42,6 @@ public class Composer {
 
     @JsonManagedReference
     @ManyToOne
-    //@XmlTransient
     private Nationality nationality;
 
 
@@ -63,7 +62,6 @@ public class Composer {
      *
      * @param firstName   the first name
      * @param lastName    the last name
-
      * @param nationality the nationality
      */
     public Composer(String firstName, String lastName, Nationality nationality) {
@@ -72,6 +70,15 @@ public class Composer {
         this.nationality = nationality;
     }
 
+    /**
+     * Instantiates a new Composer.
+     *
+     * @param firstName   the first name
+     * @param lastName    the last name
+     * @param birthYear   the birth year
+     * @param deathYear   the death year
+     * @param nationality the nationality
+     */
     public Composer(String firstName, String lastName, Integer birthYear, Integer deathYear, Nationality nationality) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -189,15 +196,35 @@ public class Composer {
     }
 
 
+    /**
+     * Gets compositions.
+     *
+     * @return the compositions
+     */
     public Set<Composition> getCompositions() { return compositions; }
 
+    /**
+     * Sets compositions.
+     *
+     * @param compositions the compositions
+     */
     public void setCompositions(Set<Composition> compositions) {this.compositions = compositions;}
 
+    /**
+     * Add composition.
+     *
+     * @param composition the composition
+     */
     public void addComposition(Composition composition) {
         compositions.add(composition);
         composition.setComposer(this);
     }
 
+    /**
+     * Remove composition.
+     *
+     * @param composition the composition
+     */
     public void removeComposition(Composition composition) {
         compositions.add(composition);
         composition.setComposer(null);

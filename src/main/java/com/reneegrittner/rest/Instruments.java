@@ -20,12 +20,24 @@ import java.io.IOException;
 import java.util.List;
 
 
+/**
+ * The type Instruments.
+ */
 @Path("/Instruments")
 
 public class Instruments {
     private final Logger logger = LogManager.getLogger(this.getClass());
+    /**
+     * The Dao.
+     */
     GenericDao<Instrument> dao = new GenericDao<>(Instrument.class);
 
+    /**
+     * Retrieve all instruments json response.
+     *
+     * @return the response
+     * @throws IOException the io exception
+     */
     @GET
     @Path("/json")
     @Produces({MediaType.APPLICATION_JSON})
@@ -40,6 +52,12 @@ public class Instruments {
         return Response.status(200).entity(jsonToReturn).build();
     }
 
+    /**
+     * Retrieve all instruments xml response.
+     *
+     * @return the response
+     * @throws IOException the io exception
+     */
     @GET
     @Path("/xml")
     @Produces({MediaType.APPLICATION_XML})
@@ -54,6 +72,13 @@ public class Instruments {
         return Response.status(200).entity(jsonToReturn).build();
     }
 
+    /**
+     * Composers of provided nationality json response.
+     *
+     * @param instrumentCategory the instrument category
+     * @return the response
+     * @throws JsonProcessingException the json processing exception
+     */
     @GET
     @Path("/{param}/json")
     @Produces({MediaType.APPLICATION_JSON})
@@ -91,6 +116,13 @@ public class Instruments {
     }
 
 
+    /**
+     * Composers of provided nationality xml response.
+     *
+     * @param instrumentCategory the instrument category
+     * @return the response
+     * @throws JsonProcessingException the json processing exception
+     */
     @GET
     @Path("/{param}/xml")
     @Produces({MediaType.APPLICATION_XML})
@@ -127,6 +159,12 @@ public class Instruments {
     }
 
 
+    /**
+     * Testing response.
+     *
+     * @param instrumentCategory the instrument category
+     * @return the response
+     */
     @GET
     @Path("/turkey/{param}")
     public Response testing(@PathParam("param") String instrumentCategory){

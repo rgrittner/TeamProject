@@ -16,6 +16,7 @@ import java.util.Set;
  * Represents the different types of instruments that may be encountered.
  * Percussionists utilize a wide range of instrumentation, and providing
  * categories will allow for better display and sorting.
+ *
  * @author Renee Grittner
  */
 @Entity(name = "InstrumentCategory")
