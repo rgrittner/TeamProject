@@ -11,10 +11,20 @@ import org.hibernate.Transaction;
 import javax.persistence.criteria.*;
 import java.util.List;
 
+/**
+ * The type Generic dao.
+ *
+ * @param <T> the type parameter
+ */
 public class GenericDao<T> {
     private Class<T> type;
     private final Logger logger = LogManager.getLogger(this.getClass());
 
+    /**
+     * Instantiates a new Generic dao.
+     *
+     * @param type the type
+     */
     public GenericDao(Class<T> type) {
         this.type = type;
     }
@@ -51,6 +61,13 @@ public class GenericDao<T> {
         return list;
     }
 
+    /**
+     * Get by id t.
+     *
+     * @param <T> the type parameter
+     * @param id  the id
+     * @return the t
+     */
     public <T>T getById(int id){
         Session session = getSession();
         T entity = (T)session.get(type, id);
@@ -79,26 +96,6 @@ public class GenericDao<T> {
 
 
 
-    /**
-     * Get by property equal list when an Integer is the value.
-     *
-     * @param propertyName the property name
-     * @param value        the value
-     * @return the list
-     */
-//    public List<T> getByTwoPropertyEqual(String propertyName, Integer value, String propertyNameTwo, Integer valueTwo){
-//        Session session = getSession();
-//        Composition composition = new Composition();
-//        composition.getId();
-//        CriteriaBuilder builder = session.getCriteriaBuilder();
-//        CriteriaQuery<T> query = builder.createQuery(type);
-//        Root<T> root = query.from(type);
-//        Join<Composition, Object> join =
-//
-//        query.select(root).where(builder.equal(root.get("id"), 1)).where(builder.equal(root.get("playerNumber"), 1));
-//        List<T> list = session.createQuery(query).getResultList();
-//        return list;
-//    }
 
     /**
      * Gets by property like.
@@ -124,17 +121,11 @@ public class GenericDao<T> {
     }
 
 
-
-
-
-
-
     /**
      * Save or update.
      *
      * @param entityToUpdate the entity to update
      */
-
     public void saveOrUpdate(T entityToUpdate) {
         Session session = getSession();
         Transaction transaction = session.beginTransaction();
@@ -149,7 +140,6 @@ public class GenericDao<T> {
      *
      * @param entity the entity to delete
      */
-
     public void delete(T entity) {
         Session session = getSession();
         Transaction transaction = session.beginTransaction();
