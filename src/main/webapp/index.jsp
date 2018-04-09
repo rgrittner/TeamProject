@@ -8,7 +8,7 @@
 <div class="container page-styling">
     <div class="header-wrapper">
         <div class="site-name">
-            <h1>Percussion Concert Planner</h1>
+            <h1>Database translator</h1>
         </div>
         <jsp:include page="nav.jsp" />
         <jsp:include page="banner.jsp" />
