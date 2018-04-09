@@ -159,21 +159,6 @@ public class Instruments {
     }
 
 
-    /**
-     * Testing response.
-     *
-     * @param instrumentCategory the instrument category
-     * @return the response
-     */
-    @GET
-    @Path("/turkey/{param}")
-    public Response testing(@PathParam("param") String instrumentCategory){
-
-
-        String output = "Hey! Check this shit out! We got something from the path and it is: " + instrumentCategory;
-
-        return Response.status(200).entity(output).build();
-    }
 
 }
 
