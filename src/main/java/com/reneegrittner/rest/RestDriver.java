@@ -11,6 +11,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 
+/**
+ * The type Rest driver.
+ */
 @ApplicationPath("/services")
 
 
@@ -27,10 +30,12 @@ public class RestDriver extends Application {
         h.add(InstrumentCategories.class);
         h.add(Composition.class);
         h.add(CompositionInstrument.class);
+        h.add(Compositions.class);
         
 
         return h;
     }
+
 
 }
 

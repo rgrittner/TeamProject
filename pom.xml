@@ -2,13 +2,13 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.reneegrittner</groupId>
-  <artifactId>concertPlanner</artifactId>
+  <artifactId>teamProject</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>concertPlanner Maven Webapp</name>
   <url>http://maven.apache.org</url>
    <build>
-     <finalName>concertPlanner</finalName>
+     <finalName>teamProject</finalName>
      <plugins>
        <plugin>
          <groupId>org.apache.maven.plugins</groupId>

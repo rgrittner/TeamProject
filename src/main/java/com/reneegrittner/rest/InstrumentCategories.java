@@ -20,12 +20,24 @@ import java.io.IOException;
 import java.util.List;
 
 
+/**
+ * The type Instrument categories.
+ */
 @Path("/InstrumentCategories")
 
 public class InstrumentCategories {
     private final Logger logger = LogManager.getLogger(this.getClass());
+    /**
+     * The Dao.
+     */
     GenericDao<InstrumentCategory> dao = new GenericDao<>(InstrumentCategory.class);
 
+    /**
+     * Retrieve all instrument categories json response.
+     *
+     * @return the response
+     * @throws IOException the io exception
+     */
     @GET
     @Path("/json")
     @Produces({MediaType.APPLICATION_JSON})
@@ -40,6 +52,12 @@ public class InstrumentCategories {
         return Response.status(200).entity(jsonToReturn).build();
     }
 
+    /**
+     * Retrieve all instrument categories xml response.
+     *
+     * @return the response
+     * @throws IOException the io exception
+     */
     @GET
     @Path("/xml")
     @Produces({MediaType.APPLICATION_XML})

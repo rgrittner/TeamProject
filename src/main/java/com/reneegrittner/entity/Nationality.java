@@ -118,6 +118,11 @@ public class Nationality {
         composer.setNationality(this);
     }
 
+    /**
+     * Remove composer.
+     *
+     * @param composer the composer
+     */
     public void removeComposer(Composer composer) {
         composers.remove( composer );
         composer.setNationality( null );
