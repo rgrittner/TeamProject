@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
-<jsp:include page="head.jsp" />
+<jsp:include page="../head.jsp" />
 
 <body>
 <div class="container page-styling">
@@ -17,8 +17,8 @@
         <div class="site-name">
             <h1>Percussion Concert Planner</h1>
         </div>
-        <jsp:include page="nav.jsp" />
-        <jsp:include page="banner.jsp" />
+        <jsp:include page="../nav.jsp" />
+        <jsp:include page="../banner.jsp" />
         <div class="content-wrap">
             <div class="main-title">
                 <ul class="grid effect-8" id="error">
@@ -53,6 +53,6 @@
             </div>
         </div>
 
-        <jsp:include page="scripts.jsp" />
+        <jsp:include page="../scripts.jsp" />
 </body>
 </html>
