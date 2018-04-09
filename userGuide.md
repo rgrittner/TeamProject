@@ -6,6 +6,8 @@ The Database Translator service submits SQL queries to user databases and transl
  **URL**
 
   /`[Class]`/`[Query parameter]`/`[Language]`/
+  
+  /`[Class]`/`[Language]`/
 
  **Method:**
 
@@ -65,7 +67,7 @@ The Database Translator service submits SQL queries to user databases and transl
      
  **Error Response:**
 
-(The error message Xinan is coding)
+
 
    **Code:** 401 UNAUTHORIZED <br />
    
