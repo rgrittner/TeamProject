@@ -30,7 +30,7 @@ public class Instrument {
 
     @JsonManagedReference
     @ManyToOne
-    @JoinColumn(name = "Instrument_Category_id", foreignKey = @ForeignKey(name = "Instrument_Instrument_Category"))
+    @JoinColumn(name = "Instrument_Category_Id", foreignKey = @ForeignKey(name = "Instrument_Instrument_Category"))
     private InstrumentCategory instrumentCategory;
 
     @OneToMany(mappedBy = "instrument", cascade = CascadeType.ALL, orphanRemoval = true)
